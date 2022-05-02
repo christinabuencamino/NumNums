@@ -1,4 +1,4 @@
-# Pet-E-commerce-App
+# NumNums App
 
 # Contributors: 
 
