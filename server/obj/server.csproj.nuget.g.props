@@ -23,5 +23,6 @@
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">/Users/Nancy/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.2</PkgMicrosoft_CodeAnalysis_Analyzers>
     <PkgMicrosoft_CodeAnalysis_AnalyzerUtilities Condition=" '$(PkgMicrosoft_CodeAnalysis_AnalyzerUtilities)' == '' ">/Users/Nancy/.nuget/packages/microsoft.codeanalysis.analyzerutilities/3.3.0</PkgMicrosoft_CodeAnalysis_AnalyzerUtilities>
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">/Users/Nancy/.nuget/packages/microsoft.entityframeworkcore.tools/6.0.4</PkgMicrosoft_EntityFrameworkCore_Tools>
+    <PkgFontAwesome Condition=" '$(PkgFontAwesome)' == '' ">/Users/Nancy/.nuget/packages/fontawesome/4.7.0</PkgFontAwesome>
   </PropertyGroup>
 </Project>

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "DWufvOosu0+SEjPHYcH7bwSEUuAHf84cWDmTYOx0bPYw+gAcotyQRw/3z7xSwG2i1vofaXJm89EQ8r4tl7tYXQ==",
+  "dgSpecHash": "OE5aqc9MIsTIGy6TinHVQ/KbMRqKo9bMt1Y/8soegMaHBoYwEm45kg0r4KGv+YdlR2NTQxODC03M9d5glgn7qg==",
   "success": true,
   "projectFilePath": "/Users/Nancy/Documents/Projects /NumNums/server/server.csproj",
   "expectedPackageFiles": [
+    "/Users/Nancy/.nuget/packages/fontawesome/4.7.0/fontawesome.4.7.0.nupkg.sha512",
     "/Users/Nancy/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/Nancy/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",
     "/Users/Nancy/.nuget/packages/messagepack.annotations/2.1.152/messagepack.annotations.2.1.152.nupkg.sha512",

@@ -22,9 +22,17 @@ namespace server.Models
 			modelBuilder.Entity<PetType>().ToTable("PetTypes");
 			modelBuilder.Entity<UserData>().ToTable("Users");
 			modelBuilder.Entity<PetData>().ToTable("PetDatas");
+			modelBuilder.Entity<PetGender>().ToTable("PetTypes");
+            modelBuilder.Entity<FoodPref>().ToTable("FoodPrefs");
 
 
 		}
+
+		//seeding data
+		public DbSet<server.Models.FoodPref> FoodPref { get; set; }
+
+		//seeding data
+		public DbSet<server.Models.PetGender> PetGender { get; set; }
 	}
 }
 
