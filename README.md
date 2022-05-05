@@ -3,6 +3,7 @@
 # Contributors: 
 
 Frontend: 
+* Youssef Elsuradi
 * Tanha Jyoti
 
 Service Layer:
