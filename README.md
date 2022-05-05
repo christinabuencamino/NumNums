@@ -11,3 +11,6 @@ Service Layer:
 Backend: 
 * Nancy Ng
 * Neslie Fernandez
+
+Abstract:
+* A recreation of the Chewy website.
