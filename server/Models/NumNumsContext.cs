@@ -30,8 +30,8 @@ namespace server.Models
 			{
 				entity.HasKey(e => e.PetTypeId);
 				// entity.ToTable("PetType");
-				entity.Property(e => e.Type).HasColumnName("p_type_id").IsRequired();
-				entity.Property(e => e.IsActive).HasColumnName("isActive");
+				entity.Property(e => e.Type).IsRequired();
+				entity.Property(e => e.IsActive);
 
 
 			});
@@ -42,8 +42,8 @@ namespace server.Models
 				entity.Property(e => e.FirstName).IsRequired();
 				entity.Property(e => e.LastName).IsRequired();
 				entity.Property(e => e.Phone).IsRequired();
-				entity.Property(e => e.Street).IsRequired();
-				entity.Property(e => e.City).IsRequired();
+                entity.Property(e => e.Street).IsRequired();
+                entity.Property(e => e.City).IsRequired();
 				entity.Property(e => e.State).IsRequired();
 				entity.Property(e => e.Zipcode).IsRequired();
 			});
