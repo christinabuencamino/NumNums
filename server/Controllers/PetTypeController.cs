@@ -95,6 +95,7 @@ namespace server.Controllers
                 }
             }
 
+
             return CreatedAtAction("GetPetType", new { id = petType.PetTypeId }, petType);
         }
 

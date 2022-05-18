@@ -95,7 +95,7 @@ namespace server.Controllers
                 }
             }
 
-            return CreatedAtAction(nameof(userData), new { id = userData.UserDataId }, userData);
+            return CreatedAtAction(nameof(GetUserData), new { id = userData.UserDataId }, userData);
             //return CreatedAtAction("GetUserData", new { id = userData.UserDataId }, userData);
         }
 
