@@ -95,7 +95,8 @@ namespace server.Controllers
                 }
             }
 
-            return CreatedAtAction("GetFood", new { id = food.FoodId }, food);
+            return CreatedAtAction(nameof(GetFood), new { id = food.FoodId }, food); 
+            //return CreatedAtAction("GetFood", new { id = food.FoodId }, food);
         }
 
         // DELETE: api/Food/5
