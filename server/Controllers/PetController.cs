@@ -94,8 +94,8 @@ namespace server.Controllers
                     throw;
                 }
             }
-
-            return CreatedAtAction("GetPetData", new { id = petData.PetDataId }, petData);
+            return CreatedAtAction(nameof(GetPetData), new { id = petData.PetDataId }, petData);
+            //return CreatedAtAction("GetPetData", new { id = petData.PetDataId }, petData);
         }
 
         // DELETE: api/Pet/5

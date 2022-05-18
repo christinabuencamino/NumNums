@@ -96,7 +96,8 @@ namespace server.Controllers
             }
 
 
-            return CreatedAtAction("GetPetType", new { id = petType.PetTypeId }, petType);
+            return CreatedAtAction(nameof(GetPetType), new { id = petType.PetTypeId }, petType);
+            //return CreatedAtAction("GetPetType", new { id = petType.PetTypeId }, petType);
         }
 
         // DELETE: api/PetType/5
