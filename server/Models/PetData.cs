@@ -13,17 +13,19 @@ namespace server.Models
 		
         [Column("pet_id")]
         public string PetDataId { get; set; }
+        [Column("user_id")]
+        public string UserId { get; set; }
+        
         [Column("pet_name")]
 		public string PetName { get; set; }
-		[Column("user_id")]
-		public string UserId { get; set; }
-		[Column("ptype_id")]
+		
+		[Column("pettype_id")]
 		public string PtypeId { get; set; }
-		[Column("gender_id")]
+		[Column("petgender_id")]
 		public string GenderId { get; set; }
 		[Column("pet_dob")]
 		public DateTime PetDOB { get; set; }
-		[Column("food_pref")]
+		[Column("foodtype_id")]
 		public string FoodPreference { get; set; }
 	}
 }

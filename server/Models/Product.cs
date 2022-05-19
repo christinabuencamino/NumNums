@@ -14,22 +14,22 @@ namespace server.Models
         [Column("prod_id")]
         public string ProductId { get; set; }
         
-        [Column("prod_name")]
+        [Column("name")]
         public string ProductName { get; set; }
         
-        [Column("ptype_id")]
+        [Column("pettype_id")]
         public string ProductTypeId { get; set; }
         
-        [Column("food_id")]
+        [Column("foodtype_id")]
         public string FoodId { get; set; }
         
-        [Column("food_price")]
+        [Column("price")]
         public int FoodPrice{ get; set; }
         
-        [Column("prod_stock")]
+        [Column("stock")]
         public int ProductStock{ get; set; }
         
-        [Column("prod_link")]
+        [Column("link_id")]
         public string ProductLink{ get; set; }
 
     }

@@ -12,20 +12,27 @@ namespace server.Models
 
 		[Column("user_id")]
 		public string UserDataId { get; set; }
-		[Column("user_firstname")]
+		[Column("first_name")]
 		public string FirstName { get; set; }
-		[Column("user_lastname")]
+		[Column("last_name")]
 		public string LastName { get; set; }
-		[Column("user_phonenumber")]
+		[Column("phone_number")]
 		public string Phone { get; set; }
-		[Column("user_st_address")]
-		public string? Street { get; set; }
-		[Column("user_city")]
-		public string? City { get; set; }
-		[Column("user_state")]
-		public string? State { get; set; }
-		[Column("user_zipcode")]
-        public int? Zipcode { get; set; }
+		
+		[Column("email")]
+		public string Email { get; set; }
+		
+		[Column("password")]
+		public string Password { get; set; }
+		
+		[Column("street")]
+		public string Street { get; set; }
+		[Column("city")]
+		public string City { get; set; }
+		[Column("state")]
+		public string State { get; set; }
+		[Column("zipcode")]
+        public int Zipcode { get; set; }
 	}
 }
 
