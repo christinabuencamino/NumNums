@@ -11,7 +11,7 @@ namespace server.Models
 		{
 		}
 		
-		[Column("ptype_id")]
+		[Column("pettype_id")]
 		public string PetTypeId { get; set; }
 		[Column("pet_type")]
 		public string Type { get; set; }

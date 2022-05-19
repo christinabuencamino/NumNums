@@ -6,14 +6,12 @@ namespace server.Models
 	
 	public class Food
 	{
-		public Food()
-		{
-		}
+		public Food(){}
 		
-		[Column("food_id")]
+		[Column("foodtype_id")]
 		public string FoodId { get; set; }
 		[Column("food_type")]
-		public string FoodType { get; set; }
+		public string FoodKind { get; set; }
 	}
 }
 

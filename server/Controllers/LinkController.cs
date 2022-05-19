@@ -1,4 +1,4 @@
-﻿#nullable disable
+#nullable disable
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,47 +12,47 @@ namespace server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserDataController : ControllerBase
+    public class LinkController : ControllerBase
     {
         private readonly NumNumsContext _context;
 
-        public UserDataController(NumNumsContext context)
+        public LinkController(NumNumsContext context)
         {
             _context = context;
         }
 
-        // GET: api/UserData
+        // GET: api/Link
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<UserData>>> GetUserDatas()
+        public async Task<ActionResult<IEnumerable<WebLink>>> GetLinks()
         {
-            return await _context.UserDatas.ToListAsync();
+            return await _context.Links.ToListAsync();
         }
 
-        // GET: api/UserData/5
+        // GET: api/Link/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserData>> GetUserData(string id)
+        public async Task<ActionResult<WebLink>> GetWebLink(string id)
         {
-            var userData = await _context.UserDatas.FindAsync(id);
+            var webLink = await _context.Links.FindAsync(id);
 
-            if (userData == null)
+            if (webLink == null)
             {
                 return NotFound();
             }
 
-            return userData;
+            return webLink;
         }
 
-        // PUT: api/UserData/5
+        // PUT: api/Link/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUserData(string id, UserData userData)
+        public async Task<IActionResult> PutWebLink(string id, WebLink webLink)
         {
-            if (id != userData.UserDataId)
+            if (id != webLink.WebLinkId)
             {
                 return BadRequest();
             }
 
-            _context.Entry(userData).State = EntityState.Modified;
+            _context.Entry(webLink).State = EntityState.Modified;
 
             try
             {
@@ -60,7 +60,7 @@ namespace server.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!UserDataExists(id))
+                if (!WebLinkExists(id))
                 {
                     return NotFound();
                 }
@@ -73,19 +73,19 @@ namespace server.Controllers
             return NoContent();
         }
 
-        // POST: api/UserData
+        // POST: api/Link
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<UserData>> PostUserData(UserData userData)
+        public async Task<ActionResult<WebLink>> PostWebLink(WebLink webLink)
         {
-            _context.UserDatas.Add(userData);
+            _context.Links.Add(webLink);
             try
             {
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateException)
             {
-                if (UserDataExists(userData.UserDataId))
+                if (WebLinkExists(webLink.WebLinkId))
                 {
                     return Conflict();
                 }
@@ -95,29 +95,29 @@ namespace server.Controllers
                 }
             }
 
-            return CreatedAtAction(nameof(GetUserData), new { id = userData.UserDataId }, userData);
-            //return CreatedAtAction("GetUserData", new { id = userData.UserDataId }, userData);
+            return CreatedAtAction(nameof(GetWebLink), new { id = webLink.WebLinkId }, webLink);
+            //return CreatedAtAction("GetWebLink", new { id = webLink.WebLinkId }, webLink);
         }
 
-        // DELETE: api/UserData/5
+        // DELETE: api/Link/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUserData(string id)
+        public async Task<IActionResult> DeleteWebLink(string id)
         {
-            var userData = await _context.UserDatas.FindAsync(id);
-            if (userData == null)
+            var webLink = await _context.Links.FindAsync(id);
+            if (webLink == null)
             {
                 return NotFound();
             }
 
-            _context.UserDatas.Remove(userData);
+            _context.Links.Remove(webLink);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool UserDataExists(string id)
+        private bool WebLinkExists(string id)
         {
-            return _context.UserDatas.Any(e => e.UserDataId == id);
+            return _context.Links.Any(e => e.WebLinkId == id);
         }
     }
 }
