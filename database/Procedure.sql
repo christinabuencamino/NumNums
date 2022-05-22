@@ -1,173 +1,152 @@
-/***************** PetData Pet Food Pref ********************/
 
-
-
-/* All Products based on PetData pet type*/
-SELECT * FROM Product
-INNER JOIN PetData
-WHERE Product.ptype_id = PetData.ptype_id
-
-
-
-/* All Products based on PetData pet type and food preference */
-SELECT * FROM Product
-INNER JOIN PetData
-WHERE Product.ptype_id = PetData.ptype_id
-AND Product.food_id = PetData.food_pref;
-
-
-
-/***************** All Food Products SEARCH ********************/
-
-/*Show All Products*/
+-- Shows all the Products form our Store
 SELECT * FROM Product;
 
-/*Show All Cat Products*/
+-- Selects All Cat Product
 SELECT * FROM Product
-WHERE ptype_id = "ptype_0000";
+WHERE pettype_id = "pettype_00";
 
-/*Show All Dog Products*/
+--Show All Dog Products
 SELECT * FROM Product
-WHERE ptype_id = "ptype_0001";
+WHERE pettype_id = "pettype_01";
 
 
-/***************** All Food Products Sort ********************/
+/***************** All Products Sort ********************/
 
-/*Sort All Product Price Lowest to Highest*/
+--Sort All Product Price Lowest to Highest
 SELECT * FROM Product
-ORDER BY @food_price ASC;
+ORDER BY price ASC;
 
-/*Sort All Product Price Highest to Lowest*/
+--Sort All Product Price Highest to Lowest
 SELECT * FROM Product
-ORDER BY food_price DESC;
+ORDER BY price DESC;
 
-/*Sort All Product Name A to Z*/
-SELECT * FROM Product
-ORDER BY prod_name ASC;
 
-/*Sort All Product Name Z to A*/
+--Sort All Product Name A to Z
 SELECT * FROM Product
-ORDER BY prod_name DESC;
+ORDER BY name ASC;
+
+--Sort All Product Name Z to A
+SELECT * FROM Product
+ORDER BY name DESC;
 
 
 /***************** Cat Food Products Sort ********************/
 
-/*Sort All Cat Food Product Price Lowest to Highest*/
+--Sort All Cat Food Product Price Lowest to Highest
 SELECT * FROM Product 
-WHERE ptype_id = "ptype_0000"
-ORDER BY food_price ASC;
+WHERE pettype_id = "pettype_00"
+ORDER BY price ASC;
 
 /*Sort ALL Cat Food Product Price Highest to Lowest*/
 SELECT * FROM Product
-WHERE ptype_id = "ptype_0000"
-ORDER BY food_price DESC;
+WHERE pettype_id = "pettype_00"
+ORDER BY price DESC;
 
-
-/*Sort All Cat Food Product Name A to Z*/
+-- Sort All Cat Food Product Name A to Z
 SELECT * FROM Product
-WHERE ptype_id = "ptype_0000"
-ORDER BY prod_name ASC;
+WHERE pettype_id = "pettype_00"
+ORDER BY name ASC;
 
-/*Sort All Cat Food Product Name Z to A*/
+-- Sort All Cat Food Product Name Z to A
 SELECT * FROM Product
-WHERE ptype_id = "ptype_0000"
-ORDER BY prod_name DESC;
+WHERE pettype_id = "pettype_00"
+ORDER BY name DESC;
 
 
-/*Sort Wet Cat Food Product Price Lowest to Highest*/
+-- Sort Wet Cat Food Product Price Lowest to Highest
 SELECT * FROM Product 
-WHERE ptype_id = "ptype_0000"
-AND food_type = "food__0000"
-ORDER BY food_price ASC;
+WHERE pettype_id = "pettype_00"
+AND foodtype_id = "foodtype_00"
+ORDER BY price ASC;
 
-/*Sort Dry Cat Food Product Price Lowest to Highest*/
+-- Sort Dry Cat Food Product Price Lowest to Highest
 SELECT * FROM Product 
-WHERE ptype_id = "ptype_0000"
-AND food_type = "food__0001"
-ORDER BY food_price ASC;
+WHERE pettype_id = "pettype_00"
+AND foodtype_id = "foodtype_01"
+ORDER BY price ASC;
 
-/*Sort Treats Cat Food Product Price Lowest to Highest*/
+-- Sort Treats Cat Food Product Price Lowest to Highest
 SELECT * FROM Product 
-WHERE ptype_id = "ptype_0000"
-AND food_type = "food_0002"
-ORDER BY food_price ASC;
+WHERE pettype_id = "pettype_00"
+AND foodtype_id = "foodtype_02"
+ORDER BY price ASC;
 
-/*Sort Wet Cat Food Product Price Highest to Lowest*/
+-- Sort Wet Cat Food Product Price Highest to Lowest
 SELECT * FROM Product 
-WHERE ptype_id = "ptype_0000"
-AND food_type = "food__0000"
-ORDER BY food_price DESC;
+WHERE pettype_id = "pettype_00"
+AND foodtype_id = "foodtype_00"
+ORDER BY price DESC;
 
-/*Sort Dry Cat Food Product Price Highest to Lowest*/
+-- Sort Dry Cat Food Product Price Highest to Lowest
 SELECT * FROM Product 
-WHERE ptype_id = "ptype_0000"
-AND food_type = "food__0001"
-ORDER BY food_price DESC;
+WHERE pettype_id = "pettype_00"
+AND foodtype_id = "foodtype_01"
+ORDER BY price DESC;
 
-/*Sort Treats Cat Food Product Price Highest to Lowest*/
+-- Sort Treats Cat Food Product Price Highest to Lowest*/
 SELECT * FROM Product 
-WHERE ptype_id = "ptype_0000"
-AND food_type = "food_0002"
-ORDER BY food_price DESC;
+WHERE pettype_id = "pettype_00"
+AND foodtype_id = "foodtype_02"
+ORDER BY price DESC;
+
+-- Sort ALL Dog Food Product Price Lowest To Highest
+SELECT * FROM Product 
+WHERE pettype_id = "pettype_01"
+ORDER BY price ASC;
 
 
 /***************** Dog Food Products Sort ********************/
 
-/*Sort ALL Dog Food Product Price Highest to Lowest**/
-SELECT * FROM Product 
-WHERE ptype_id = "ptype_0001"
-ORDER BY food_price ASC;
 
-/*Sort ALL Dog Food Product Price Highest to Lowest*/
+-- Sort ALL Dog Food Product Price Highest to Lowest
 SELECT * FROM Product
-WHERE ptype_id = "ptype_0001"
-ORDER BY food_price DESC;
+WHERE pettype_id = "pettype_01"
+ORDER BY price DESC;
 
 
-/*Sort All Cat Food Product Name A to Z*/
+-- Sort All Cat Food Product Name A to Z
 SELECT * FROM Product
-WHERE ptype_id = "ptype_0000"
-ORDER BY prod_name ASC;
+WHERE pettype_id = "pettype_00"
+ORDER BY name ASC;
 
-/*Sort All Cat Food Product Name Z to A*/
+-- Sort All Cat Food Product Name Z to A
 SELECT * FROM Product
-WHERE ptype_id = "ptype_0000"
-ORDER BY prod_name DESC;
+WHERE pettype_id = "pettype_00"
+ORDER BY name DESC;
 
-
-
-/*Sort Wet Dog Food Product Price Lowest to Highest*/
+-- Sort Wet Dog Food Product Price Lowest to Highest
 SELECT * FROM Product 
-WHERE ptype_id = "ptype_0001"
-AND food_type = "food__0000"
-ORDER BY food_price ASC;
+WHERE pettype_id = "pettype_01"
+AND foodtype_id = "foodtype_00"
+ORDER BY price ASC;
 
-/*Sort Dry Dog Food Product Price Lowest to Highest*/
+-- Sort Dry Dog Food Product Price Lowest to Highest
 SELECT * FROM Product 
-WHERE ptype_id = "ptype_0001"
-AND food_type = "food__0001"
-ORDER BY food_price ASC;
+WHERE pettype_id = "pettype_01"
+AND foodtype_id = "foodtype_01"
+ORDER BY price ASC;
 
-/*Sort Treats Dog Food Product Price Lowest to Highest*/
+-- Sort Treats Dog Food Product Price Lowest to Highest
 SELECT * FROM Product 
-WHERE ptype_id = "ptype_0001"
-AND food_type = "food_0002"
-ORDER BY food_price ASC;
+WHERE pettype_id = "pettype_01"
+AND foodtype_id = "foodtype_02"
+ORDER BY price ASC;
 
-/*Sort Wet Dog Food Product Price Highest to Lowest*/
+-- Sort Wet Dog Food Product Price Highest to Lowest
 SELECT * FROM Product 
-WHERE ptype_id = "ptype_0001"
-AND food_type = "food__0000"
-ORDER BY food_price DESC;
+WHERE pettype_id = "pettype_01"
+AND foodtype_id = "foodtype_00"
+ORDER BY price DESC;
 
-/*Sort Dry Dog Food Product Price Highest to Lowest*/
+-- Sort Dry Dog Food Product Price Highest to Lowest
 SELECT * FROM Product 
-WHERE ptype_id = "ptype_0001"
-AND food_type = "food__0001"
-ORDER BY food_price DESC;
+WHERE pettype_id = "pettype_01"
+AND foodtype_id = "foodtype_01"
+ORDER BY price DESC;
 
-/*Sort Treats Dog Food Product Price Highest to Lowest*/
+-- Sort Treats Dog Food Product Price Highest to Lowest
 SELECT * FROM Product 
-WHERE ptype_id = "ptype_0001"
-AND food_type = "food_0002"
-ORDER BY food_price DESC;
+WHERE pettype_id = "pettype_01"
+AND foodtype_id = "foodtype_02"
+ORDER BY price DESC;
